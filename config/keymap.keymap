@@ -40,7 +40,7 @@
             bindings = <
 &trans  &trans   &trans   &trans        &trans           &trans                                       &trans                   &trans     &trans     &trans  &trans  &trans
 &trans  &trans   &trans   &trans        &trans           &trans                                       &trans                   &to 3      &trans     &trans  &trans  &trans
-&trans  &trans   &trans   &mkp RCLK     &mkp LCLK        &trans                &trans     &trans      &trans                   &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans   &trans   &mkp RCLK     &mkp LCLK        &mkp MCLK             &trans     &trans      &mkp MCLK                &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
 &trans  &trans   &trans   &trans        &trans           &trans                &kp SPACE  &kp DELETE  &trans                   &trans     &trans     &trans  &trans  &trans
 &trans  &kp ESC  &kp TAB  &kp LEFT_ALT  &mt LCTRL ENTER  &mt LEFT_SHIFT SPACE  &trans     &trans      &mt RIGHT_GUI BACKSPACE  &trans     &trans     &trans  &trans  &trans
             >;
