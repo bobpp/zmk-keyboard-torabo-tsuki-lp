@@ -87,9 +87,15 @@
         compatible = "zmk,cdc-acm-bootloader-trigger";
     };
 
+    zip_xy_scaler: zip_xy_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+    };
+
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        input-processors = <&zip_xy_scaler 1 8>;
     };
 
     vbatt: vbatt {
@@ -157,5 +163,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
         power-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_H1)>;
+        res-cpi = <1800>;
     };
 };
